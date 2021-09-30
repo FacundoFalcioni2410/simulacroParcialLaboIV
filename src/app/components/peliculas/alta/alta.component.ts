@@ -27,8 +27,8 @@ export class AltaComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  recibirActor(pais: any): void {
-    this.form.get('actor')?.setValue(pais.nombre);
+  recibirActor(actor: any): void {
+    this.form.get('actor')?.setValue(`${actor.nombre} ${actor.apellido}`);
   }
 
   onFileChange(event: any) {
@@ -37,7 +37,7 @@ export class AltaComponent implements OnInit {
 
   agregarPelicula(){
     console.log(this.form.get('file')?.value);
-    let pelicula = new Movie(this.form.get('nombre')?.value, this.form.get('nombre')?.value,this.form.get('tipo')?.value,this.form.get('fechaEstreno')?.value, this.form.get('cantidadPublico')?.value, this.form.get('file')?.value);
+    let pelicula = new Movie(0, this.form.get('nombre')?.value,this.form.get('tipo')?.value,this.form.get('fechaEstreno')?.value, this.form.get('cantidadPublico')?.value, this.form.get('file')?.value);
     // console.log(pelicula);
     this.firestore.agregarPelicula({...pelicula});
   }
