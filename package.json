@@ -1,5 +1,5 @@
 {
-  "name": "sala-de-juegos",
+  "name": "simulacro-parcial",
   "version": "0.0.0",
   "scripts": {
     "postinstall": "ng build --output-path angularapp --aot --prod",
