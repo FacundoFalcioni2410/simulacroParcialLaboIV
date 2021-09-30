@@ -6,11 +6,11 @@ import { AppComponent } from './app.component';
 import { BienvenidoComponent } from './components/bienvenido/bienvenido.component';
 import { BusquedaComponent } from './components/busqueda/busqueda.component';
 import { HttpClientModule } from '@angular/common/http';
-import { TablaPeliculaComponent } from './components/tabla-pelicula/tabla-pelicula.component';
 import { AngularFireModule } from '@angular/fire/compat'
 import { environment } from '../environments/environment';
 import { DetallePeliculaComponent } from './components/peliculas/detalle-pelicula/detalle-pelicula.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { SharedModule } from './shared/shared.module';
 
 
 @NgModule({
@@ -18,10 +18,10 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     AppComponent,
     BienvenidoComponent,
     BusquedaComponent,
-    TablaPeliculaComponent,
     DetallePeliculaComponent,
   ],
   imports: [
+    SharedModule,
     ReactiveFormsModule,
     FormsModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
