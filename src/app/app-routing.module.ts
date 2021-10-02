@@ -6,7 +6,7 @@ import { BienvenidoComponent } from './components/bienvenido/bienvenido.componen
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'busqueda',
+    redirectTo: 'bienvenido',
     pathMatch: 'full'
   },
   {

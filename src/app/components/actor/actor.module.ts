@@ -7,13 +7,15 @@ import { ListadoComponent } from './listado/listado.component';
 import { AltaComponent } from './alta/alta.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ActorPeliculaComponent } from './actor-pelicula/actor-pelicula.component';
+import { DetalleComponent } from './detalle/detalle.component';
 
 
 @NgModule({
   declarations: [
     ListadoComponent,
     AltaComponent,
-    ActorPeliculaComponent
+    ActorPeliculaComponent,
+    DetalleComponent
   ],
   imports: [
     SharedModule,

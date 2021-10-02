@@ -1,3 +1,4 @@
+import { ActorPeliculaComponent } from './actor-pelicula/actor-pelicula.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AltaComponent } from './alta/alta.component';
@@ -11,6 +12,10 @@ const routes: Routes = [
   {
     path: 'alta',
     component: AltaComponent
+  },
+  {
+    path: 'actorpelicula',
+    component: ActorPeliculaComponent
   }
 ];
 

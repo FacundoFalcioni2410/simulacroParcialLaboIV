@@ -2,7 +2,7 @@
     <div class="container py-4">  
       
   
-      <div class="row align-items-md-stretch">
+      <div class="row align-items-md-stretch d-flex justify-content-center">
         <div class="col-md-12">
             <div class="h-100 p-5 bg-light rounded-3">
               <h2>Listado componentes</h2>
@@ -10,14 +10,7 @@
               <button class="btn btn-secondary" type="button" (click)='cambiarVista()'>Cambiar vista</button>
             </div>
           </div>
-        <div class="col-md-4">
-          <div class="h-100 p-5 text-white bg-dark rounded-3">
-            <h2>Borrar</h2>
-            <p>Borrado de una entidad</p>
-            <button class="btn btn-outline-light" type="button">Borrar</button>
-          </div>
-        </div>
-        <div class="col-md-4">
+        <div class="col-md-6">
           <div class="h-100 p-5 text-white bg-dark rounded-3">
             <div *ngIf='!this.peliculaSeleccionada'>
               <h2>Solo mostrar</h2>
@@ -29,18 +22,8 @@
             <button class="btn btn-outline-light" type="button" (click)='borrarPelicula()'>Limpiar</button>
           </div>
         </div>
-        <div class="col-md-4">
-          <div class="h-100 p-5 text-white bg-dark rounded-3">
-            <h2>Modificar</h2>
-            <p>Modificacion de una entidad</p>
-            <button class="btn btn-outline-light" type="button">Guardar cambios</button>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <button class='btn btn-primary' [routerLink]="['/actor/alta']">Alta actor</button>
-        </div>
-        <div class="col-md-4">
-          <button class='btn btn-primary' [routerLink]="['/peliculas/alta']">Alta pelicula</button>
+        <div class="mt-3">
+          <button class='btn btn-primary' [routerLink]="['/']">Volver al inicio</button>
         </div>
     </div>
   </div>

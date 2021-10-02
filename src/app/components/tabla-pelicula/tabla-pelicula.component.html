@@ -10,7 +10,7 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor='let pelicula of peliculas' (click)='peliculaSeleccionada(pelicula)'>
+      <tr *ngFor='let pelicula of peliculasActor' (click)='peliculaSeleccionada(pelicula)'>
         <td>{{pelicula.id}}</td>
         <td>{{pelicula.nombre}}</td>
         <td>{{pelicula.tipo}}</td>

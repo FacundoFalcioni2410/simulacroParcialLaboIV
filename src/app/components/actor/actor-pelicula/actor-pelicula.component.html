@@ -6,42 +6,36 @@
         <div class="col-md-12">
             <div class="h-100 p-5 bg-light rounded-3">
               <h2>Listado componentes</h2>
-              <!-- <app-tabla-pelicula *ngIf='this.mostrar' (seleccionada)='recibirPelicula($event)'></app-tabla-pelicula>
-              <button class="btn btn-secondary" type="button" (click)='cambiarVista()'>Cambiar vista</button> -->
+              <app-tabla-actor (enviarActor)='recibirActor($event)'></app-tabla-actor>
             </div>
           </div>
-        <div class="col-md-4">
-          <div class="h-100 p-5 text-white bg-dark rounded-3">
-            <h2>Borrar</h2>
-            <p>Borrado de una entidad</p>
-            <button class="btn btn-outline-light" type="button">Borrar</button>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="h-100 p-5 text-white bg-dark rounded-3">
-            <!-- <div *ngIf='!this.peliculaSeleccionada'> -->
-              <h2>Solo mostrar</h2>
-              <p>Listado de entidad</p>
+        <div class="col-md-5">
+          <div class="h-100 p-5 text-white rounded-3" *ngIf='this.peliculasActor'>
+            <div>
+                <app-tabla-pelicula [peliculasActor]='this.peliculasActor'></app-tabla-pelicula>
             </div>
-            <!-- <div *ngIf='this.peliculaSeleccionada'>
-              <app-detalle-pelicula [peliculaRecibida]='this.peliculaSeleccionada'></app-detalle-pelicula>
-            </div> -->
-            <!-- <button class="btn btn-outline-light" type="button" (click)='borrarPelicula()'>Limpiar</button> -->
+            <button class="btn btn-danger" type="button" (click)='borrarPeliculasActor()'>Limpiar</button>
           </div>
         </div>
-        <div class="col-md-4">
-          <div class="h-100 p-5 text-white bg-dark rounded-3">
-            <h2>Modificar</h2>
-            <p>Modificacion de una entidad</p>
-            <button class="btn btn-outline-light" type="button">Guardar cambios</button>
-          </div>
+          <div class="col-md-3 offset-md-1">
+            <div class="h-100 p-5 text-white rounded-3" *ngIf='this.paisSeleccionado'>
+              <div>
+                  <app-tabla-paises [paisRecibido]='this.paisSeleccionado'></app-tabla-paises>
+              </div>
+              <button class="btn btn-danger" type="button" (click)='borrarPaisActor()'>Limpiar</button>
+            </div>
         </div>
-        <div class="col-md-4">
-          <button class='btn btn-primary' [routerLink]="['/actor/alta']">Alta actor</button>
+          <div class="col-md-2">
+            <div class="h-100 p-5 text-dark rounded-3" *ngIf='this.actorSeleccionado'>
+              <div>
+                  <app-detalle [actor]='this.actorSeleccionado'></app-detalle>
+              </div>
+              <button class="btn btn-danger" type="button" (click)='borrarActor()'>Limpiar</button>
+            </div>
         </div>
-        <div class="col-md-4">
-          <button class='btn btn-primary' [routerLink]="['/peliculas/alta']">Alta pelicula</button>
+        <div class='mt-3'>
+          <button class='btn btn-primary' [routerLink]="['/']">Volver al inicio</button>
         </div>
     </div>
-  <!-- </div> -->
+  </div>
 </main>

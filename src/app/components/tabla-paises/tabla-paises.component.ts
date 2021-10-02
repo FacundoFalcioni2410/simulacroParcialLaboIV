@@ -1,4 +1,4 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
 import { ApiService } from 'src/app/services/api.service';
 
 @Component({
@@ -9,6 +9,7 @@ import { ApiService } from 'src/app/services/api.service';
 export class TablaPaisesComponent implements OnInit {
 
   paises: any;
+  @Input() paisRecibido: any = [];
   @Output() paisEnviar: EventEmitter<any> = new EventEmitter();
 
   constructor(private api: ApiService) {
@@ -17,10 +18,13 @@ export class TablaPaisesComponent implements OnInit {
 
   ngOnInit(): void {
     this.api.getCountries().subscribe( (val: any) =>{
-      console.log(val);
-      for(let item of val)
+
+      if(!this.paisRecibido)
       {
-        this.paises.push(item);
+        for(let item of val)
+        {
+          this.paisRecibido.push(item);
+        }
       }
     })
   }

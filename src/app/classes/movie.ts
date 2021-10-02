@@ -1,3 +1,4 @@
+import { Actor } from './actor';
 import { Genero } from './genero';
 export class Movie {
     id: number;
@@ -6,8 +7,9 @@ export class Movie {
     fechaEstreno: string;
     cantidadPublico: number;
     foto: string;
+    actor: string;
 
-    constructor(id: number, nombre: string, tipo: Genero, fechaEstreno: string, cantidadPublico: number, foto: string)
+    constructor(id: number, nombre: string, tipo: Genero, fechaEstreno: string, cantidadPublico: number, foto: string, actor: string)
     {
         this.id = id;
         this.nombre = nombre;
@@ -15,5 +17,6 @@ export class Movie {
         this.fechaEstreno = fechaEstreno
         this.foto = foto;
         this.cantidadPublico = cantidadPublico;
+        this.actor = actor;
     }
 }
