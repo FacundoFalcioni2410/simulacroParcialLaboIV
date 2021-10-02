@@ -31,14 +31,8 @@ export class AltaComponent implements OnInit {
     this.form.get('actor')?.setValue(`${actor.nombre} ${actor.apellido}`);
   }
 
-  onFileChange(event: any) {
-    console.log(this.form.get('file')?.setValue(event.target.files[0].name));
-  }
-
   agregarPelicula(){
-    console.log(this.form.get('file')?.value);
     let pelicula = new Movie(0, this.form.get('nombre')?.value,this.form.get('tipo')?.value,this.form.get('fechaEstreno')?.value, this.form.get('cantidadPublico')?.value, this.form.get('file')?.value, this.form.get('actor')?.value);
-    // console.log(pelicula);
     this.firestore.agregarPelicula({...pelicula});
     this.form.reset();
   }

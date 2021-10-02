@@ -19,7 +19,6 @@ export class ListadoComponent implements OnInit {
         let poster = item.poster_path;
         item.poster_path = `https://image.tmdb.org/t/p/w500${poster}`
       }
-      console.log(val);
     });
   }
 

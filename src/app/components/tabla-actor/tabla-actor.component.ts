@@ -19,7 +19,6 @@ export class TablaActorComponent implements OnInit {
       {
         this.actores.push(actor);
       }
-      console.log(val);
     })
   }
 

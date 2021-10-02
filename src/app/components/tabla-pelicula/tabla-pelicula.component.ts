@@ -17,7 +17,6 @@ export class TablaPeliculaComponent implements OnInit {
   constructor(private firestore: FirestoreService) {
     this.peliculasActor = [];
     this.firestore.getPeliculas().subscribe((val: any)=>{
-      console.log(val);
       if(!this.peliculasActor.length)
       {
         for(let item of val)
